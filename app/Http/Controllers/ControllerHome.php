@@ -75,7 +75,7 @@ class ControllerHome extends Controller
 		->get();
  
 			// mengirim data lowongan ke view index
-			return view('/homecari', compact('hasil','inputhome'));
+			return view('/home', compact('hasil','inputhome'));
 		// return view('home',['lowongan' => $hasil]);
 	 }
 	 

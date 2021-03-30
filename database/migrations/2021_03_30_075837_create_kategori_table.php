@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInputbeasiswaTable extends Migration
+class CreateKategoriTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateInputbeasiswaTable extends Migration
      */
     public function up()
     {
-        Schema::create('inputbeasiswa', function (Blueprint $table) {
-            $table->increments('id_inputbeasiswa');
-            $table->longText('judul1');
-            $table->longText('konten1');
+        Schema::create('kategori', function (Blueprint $table) {
+            $table->increments('id_kategori');
+            $table->string('nama_kategori');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });
@@ -29,6 +28,6 @@ class CreateInputbeasiswaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inputbeasiswa');
+        Schema::dropIfExists('kategori');
     }
 }

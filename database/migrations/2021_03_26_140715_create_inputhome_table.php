@@ -15,10 +15,10 @@ class CreateInputhomeTable extends Migration
     {
         Schema::create('inputhome', function (Blueprint $table) {
             $table->increments('id_inputhome');
-            $table->string('konten1',200);
-            $table->string('konten2',200);
-            $table->string('konten3',200);
-            $table->string('konten4',200);
+            $table->longText('konten1');
+            $table->longText('konten2');
+            $table->longText('konten3');
+            $table->longText('konten4');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });

@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Pelamar</h1>
+                    <h1>User</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -32,35 +32,35 @@
                                     <table id="example2" class="table table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                            <td align="center"><strong>No</strong></td>
-                                            <td align="center"><strong>Nama Lengkap</strong></td>
-                                            <td align="center"><strong>Jenis Kelamin</strong></td>
-                                            <td align="center"><strong>Email</strong></td>
-                                            <td align="center"><strong>No HP</strong></td>
-                                            <td align="center"><strong>Pendidikan Terakhir</strong></td>
-                                            <td align="center"><strong>Berkas</strong></td>
+                                                <td align="center"><strong>No</strong></td>
+                                                <td align="center"><strong>Nama Kategori</strong></td>
+                                                <td align="center"><strong>Tanggal Upload</strong></td>
+                                                <td colspan="2" align="center"><strong>Aksi</strong></td>
                                             </tr>
-                                            @foreach($cv as $c)
+                                            @foreach($kategori as $k)
                                             <tr>
-                                            <td align="center">{{ $loop->iteration }}</td>
-                                            <td align="center">{{ $c->nama_lengkap_cv }}</td>
-                                            <td align="center">{{ $c->jenis_kelamin_cv }}</td>
-                                            <td align="center">{{ $c->email_cv }}</td>
-                                            <td align="center">{{ $c->no_hp_cv }}</td>
-                                            <td align="center">{{ $c->pendidikan_terakhir_cv }}</td>
-                                            <td align="center"><a href="storage/storage/berkas_file_cv/{{$c->nama_berkas_cv}}">
-                                                        {{$c->nama_berkas_cv}}
-                                                    </a>
+                                                <td align="center">{{ $k->id_kategori }}</td>
+                                                <td align="center">{{ $k->nama_kategori }}</td>
+                                                <td align="center">{{ $k->updated_at }}</td>
+                                                <td align="center">
+                                                    <a class="btn btn-primary " href="/kategori/editkategori/{{ $k->id_kategori }}">Edit</a>
+                                                </td>
+                                                <td align="center">
+                                                    <a class="btn btn-danger" href="/kategori/hapuskategori/{{ $k->id_kategori }}">Hapus</a>
                                                 </td>
                                             </tr>
                                             @endforeach
                                         </thead>
                                     </table>
                                 </div>
-                                <!-- /.card-body -->
                             </div>
+                            <a href="/kategori/input" class="btn btn-info float-left active mb-3" role="button" aria-pressed="true">
+                                <i class="fa fa-plus"></i>
+                                Tambah Data</a>
                         </div>
+                        <!-- /.card-body -->
                     </div>
+
                 </div>
                 <!-- /.col -->
             </div>

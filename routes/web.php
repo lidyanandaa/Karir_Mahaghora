@@ -27,7 +27,27 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/', 'ControllerAdmin@index')->middleware('auth');
 
+// kategori select
+Route::get('/kategori', 'ControllerKategori@kategori');
+// kategori insert
+Route::get('/kategori/input', 'ControllerKategori@inputkategori');
+Route::post('/kategori/input/tambahkategori', 'ControllerKategori@tambahkategori');
+// kategori update
+Route::get('/kategori/editkategori/{id}', 'ControllerKategori@editkategori');
+Route::post('/kategori/updatekategori', 'ControllerKategori@updatekategori');
+// kategori delete
+Route::get('/kategori/hapuskategori/{id}', 'ControllerKategori@hapuskategori');
+
+// user select
 Route::get('/user', 'ControllerUser@user');
+// user insert
+Route::get('/user/input', 'ControllerUser@inputuser');
+Route::post('/user/input/tambahuser', 'ControllerUser@tambahuser');
+// user update
+Route::get('/user/edituser/{id}', 'ControllerUser@edituser');
+Route::post('/user/updateuser', 'ControllerUser@updateuser');
+// user delete
+Route::get('/user/hapususer/{id}', 'ControllerUser@hapususer');
 
 // Route::get('/lowongan}',[ControllerLowongan::class, 'lowongan']);
 // Lowongan select

@@ -19,6 +19,15 @@ class ControllerCv extends Controller
 
     public function tambahcv(Request $request)
     {
+        $this->validate($request,[
+            'nama_lengkap_cv' => 'required',
+            'jenis_kelamin_cv' => 'required',
+            'email_cv' => 'required|max:100',
+            'no_hp_cv' => 'required|max:13',
+            'pendidikan_terakhir_cv' => 'required',
+            'nama_berkas_cv' => 'required'
+         ]);
+
         $filenameWithExt = $request->file('filecv')->getClientOriginalName();
         $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
         $extension = $request->file('filecv')->getClientOriginalExtension();

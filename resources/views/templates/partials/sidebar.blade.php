@@ -137,10 +137,14 @@
                         <i class="fas fa-th-large"></i>
                     </a>
                 </li> -->
-                <form action="{{ url('/logout') }}" method="post">
-                    @csrf
-                    <button class="button button5" type="submit">Logout</button>
-                </form>
+                <div class="col">
+                    <form action="{{ url('/logout') }}" method="post">
+                        @csrf
+
+                        <button type="submit" class="btn btn-dark ">Logout</button>
+                    </form>
+                </div>
+
             </ul>
         </nav>
         <!-- /.navbar -->
@@ -198,15 +202,30 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/lowongan" class="nav-link">
+                                    <button href="#" class="dropdown-btn">
                                         <i class="nav-icon fas fa-edit"></i>
-                                        <p>Lowongan Kerja</p>
-                                    </a>
+                                        Lowongan Kerja
+                                        <i class="right fas fa-angle-down"></i>
+                                    </button>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="/lowongan" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Input Lowongan Kerja</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="/kategori" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Kategori</p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/cv" class="nav-link">
                                         <i class="nav-icon fas fa-file"></i>
-                                        <p>CV</p>
+                                        <p>Pelamar</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -221,61 +240,61 @@
                                         <p>User</p>
                                     </a>
                                 </li>
-                                    <li class="nav-item">
-                                        <button href="#" class="dropdown-btn">
-                                            <i class="nav-icon fas fa-copy"></i>
-                                                Report
-                                                <i class="right fas fa-angle-down"></i>
-                                            
-                                        </button>
-                                        <ul class="nav nav-treeview">
-                                            <li class="nav-item">
-                                                <a href="/reportlowongan" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Laporan Lowongan</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="./reportcv" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Laporan CV</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/reportinternship" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Laporan Internship</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <button href="#" class="dropdown-btn">
-                                            <i class="nav-icon fas fa-pencil-alt"></i>
-                                                Inputan
-                                                <i class="right fas fa-angle-down"></i>
-                                        </button>
-                                        <ul class="nav nav-treeview">
-                                            <li class="nav-item">
-                                                <a href="/inputhome" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Input Home</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="./inputinternship" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Input Internship</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="/inputbeasiswa" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Input Beasiswa</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                <li class="nav-item">
+                                    <button href="#" class="dropdown-btn">
+                                        <i class="nav-icon fas fa-copy"></i>
+                                        Report
+                                        <i class="right fas fa-angle-down"></i>
+
+                                    </button>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="/reportlowongan" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Laporan Lowongan</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="/reportcv" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Laporan Pelamar</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="/reportinternship" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Laporan Internship</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <button href="#" class="dropdown-btn">
+                                        <i class="nav-icon fas fa-pencil-alt"></i>
+                                        Inputan
+                                        <i class="right fas fa-angle-down"></i>
+                                    </button>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="/inputhome" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Input Home</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="./inputinternship" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Input Internship</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="/inputbeasiswa" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Input Beasiswa</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                     </ul>

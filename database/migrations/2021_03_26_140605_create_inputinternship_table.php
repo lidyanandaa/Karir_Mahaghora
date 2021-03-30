@@ -15,12 +15,12 @@ class CreateInputinternshipTable extends Migration
     {
         Schema::create('inputinternship', function (Blueprint $table) {
             $table->increments('id_inputinternship');
-            $table->string('konten1');
-            $table->string('konten2');
-            $table->string('judul1');
-            $table->string('konten3');
-            $table->string('konten4');
-            $table->string('konten5');
+            $table->longText('konten1');
+            $table->longText('konten2');
+            $table->longText('judul1');
+            $table->longText('konten3');
+            $table->longText('konten4');
+            $table->longText('konten5');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });

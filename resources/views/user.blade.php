@@ -35,23 +35,30 @@
                                                 <td align="center"><strong>No</strong></td>
                                                 <td align="center"><strong>Nama Lengkap</strong></td>
                                                 <td align="center"><strong>Email</strong></td>
+                                                <td align="center"><strong>Tanggal Upload</strong></td>
+                                                <td colspan="2" align="center"><strong>Aksi</strong></td>
                                             </tr>
                                             @foreach($users as $u)
                                             <tr>
                                                 <td align="center">{{ $u->id }}</td>
                                                 <td align="center">{{ $u->name }}</td>
                                                 <td align="center">{{ $u->email }}</td>
+                                                <td align="center">{{ $u->updated_at }}</td>
+                                                <td align="center">
+                                                    <a class="btn btn-primary " href="/user/edituser/{{ $u->id }}">Edit</a>
+                                                </td>
+                                                <td align="center">
+                                                    <a class="btn btn-danger" href="/user/hapususer/{{ $u->id }}">Hapus</a>
+                                                </td>
                                             </tr>
                                             @endforeach
                                         </thead>
                                     </table>
-                                    @can('update-post', $post)
-                                    <a href="/lowongan/input" class="btn btn-info float-left active mb-3" role="button" aria-pressed="true">
-                                        <i class="fa fa-plus"></i>
-                                        Tambah Data</a>
-                                    @endcan
                                 </div>
                             </div>
+                            <a href="/user/input" class="btn btn-info float-left active mb-3" role="button" aria-pressed="true">
+                                <i class="fa fa-plus"></i>
+                                Tambah Data</a>
                         </div>
                         <!-- /.card-body -->
                     </div>

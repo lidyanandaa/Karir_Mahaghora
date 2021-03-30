@@ -19,7 +19,17 @@ class ControllerInternship extends Controller
     }
 
     public function tambahintern(Request $request)
-    {
+    { 
+        $this->validate($request,[
+            'nama_lengkap_intern' => 'required',
+            'jenis_kelamin_intern' => 'required',
+            'email_intern' => 'required|max:100',
+            'no_hp_intern' => 'required|max:13',
+            'instansi_intern' => 'required',
+            'jumlah_orang_intern' => 'required|max:3',
+            'nama_berkas_intern' => 'required',
+         ]);
+
         $filenameWithExt = $request->file('fileintern')->getClientOriginalName();
         $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
         $extension = $request->file('fileintern')->getClientOriginalExtension();
