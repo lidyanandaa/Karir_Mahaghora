@@ -33,7 +33,6 @@
                     <div class="small-box bg-info">
                       <div class="inner">
                         <h3>{{$lowongan}}</h3>
-
                         <p>Lowongan Kerja</p>
                       </div>
                       <div class="icon">

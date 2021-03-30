@@ -22,9 +22,9 @@ class ControllerKategori extends Controller
 
     public function tambahkategori(Request $request)
     {
-        $this->validate($request,[
-            'nama_kategori' => 'required'
-         ]);
+        // $this->validate($request,[
+        //     'nama_kategori' => 'required'
+        //  ]);
 
         // insert data ke table lowongan
         DB::table('kategori')->insert([

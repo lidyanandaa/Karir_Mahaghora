@@ -25,7 +25,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', 'ControllerAdmin@index')->middleware('auth');
+Route::get('/login', 'ControllerAdmin@index')->middleware('auth');
 
 // kategori select
 Route::get('/kategori', 'ControllerKategori@kategori');
@@ -69,7 +69,7 @@ Route::get('/cv', 'ControllerCv@cv');
 
 // Home
 Route::post('/formhome/tambahcv', 'ControllerCv@tambahcv');
-Route::get('/home', 'ControllerHome@index');
+Route::get('/', 'ControllerHome@index');
 Route::get('/formhome/{id}', 'ControllerHome@formhome');
 Route::get('/home/cari','ControllerHome@cari');
 // Route::get('/home', function () {

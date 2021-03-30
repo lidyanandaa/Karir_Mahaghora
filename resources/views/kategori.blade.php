@@ -39,7 +39,7 @@
                                             </tr>
                                             @foreach($kategori as $k)
                                             <tr>
-                                                <td align="center">{{ $k->id_kategori }}</td>
+                                                <td align="center">{{ $loop->iteration }}</td>
                                                 <td align="center">{{ $k->nama_kategori }}</td>
                                                 <td align="center">{{ $k->updated_at }}</td>
                                                 <td align="center">

@@ -23,10 +23,10 @@ class ControllerUser extends Controller
 
     public function tambahuser(Request $request)
     {
-        $this->validate($request,[
-            'name' => 'required',
-            'email' => 'required|max:150'
-         ]);
+        // $this->validate($request,[
+        //     'name' => 'required',
+        //     'email' => 'required|max:150'
+        //  ]);
 
         // insert data ke table lowongan
         DB::table('users')->insert([

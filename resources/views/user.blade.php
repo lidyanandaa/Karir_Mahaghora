@@ -40,7 +40,7 @@
                                             </tr>
                                             @foreach($users as $u)
                                             <tr>
-                                                <td align="center">{{ $u->id }}</td>
+                                                <td align="center">{{ $loop->iteration }}</td>
                                                 <td align="center">{{ $u->name }}</td>
                                                 <td align="center">{{ $u->email }}</td>
                                                 <td align="center">{{ $u->updated_at }}</td>

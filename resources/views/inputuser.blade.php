@@ -43,6 +43,11 @@
                                     <input type="email" class="form-control" id="emailuser" aria-describedby="emailHelp" name="emailuser" placeholder="Enter Email" >
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">[Password</label>
+                                    <input type="password" class="form-control" id="emailuser" aria-describedby="emailHelp" name="emailuser" placeholder="Enter Email" >
+                                </div>
+
                                 <input type="submit" value="Simpan" class="form-control button btn-danger">
                             </form>
                         </div>
